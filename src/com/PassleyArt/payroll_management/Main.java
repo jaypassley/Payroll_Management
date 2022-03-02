@@ -5,37 +5,28 @@ package com.PassleyArt.payroll_management;
                   Ramon Francis 1400137487
                           */
 
-import java.util.Scanner;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
-
     public static void main(String[] args) {
-        Scanner myObj = new Scanner(System.in);
 
+        StaffMember[] staffMembers = {
+                new StaffMember("Jay","Passley","ICT-01",40),
+                new StaffMember("tina","clarke","DBT-02",45),
+                new StaffMember("Caleb","Jones","MTH-03",38),
+                new StaffMember("Jonah","Blake","SCI-04",42),
+                new StaffMember("Asha","May","ENT-05",58)
 
-        Manager Obj1 = new Manager();   //create object of Manager
-        SalesRep obj2 = new SalesRep();  //create object of SalesRep
+        };
 
-        //start accepting input from user via scanner.
-        System.out.println("Enter First Name");
-        Obj1.setFirstName(myObj.next());
+        List<StaffMember> staffMemberList = Arrays.asList(staffMembers);
 
-        System.out.println("Enter Last Name");
-        Obj1.setLastName(myObj.next());
-
-        System.out.println("Enter Dept #");
-        Obj1.setDeptNumber(myObj.next());
-
-        System.out.println("Enter Hours Worked");
-        Obj1.setHoursWorked(myObj.nextDouble());
-
-        System.out.println("Enter Bonus");
-        Obj1.setBonus(myObj.nextDouble());
-        // end of user input
-
-        //Display Client info with Card
-        System.out.println("\nManager Info\n");
-        Obj1.display();
-
+        System.out.println("\n***StaffMembers Info***");
+        staffMemberList.forEach(System.out::println);
     }
 }
+
+
+

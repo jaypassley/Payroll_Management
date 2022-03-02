@@ -55,4 +55,9 @@ public StaffMember(String firstName,String lastName, String deptNumber, double h
                 "Dept #: " + deptNumber + "\n" +
                 "Hours Worked: " + hoursWorked + "\n");
     }
+    @Override
+    public String toString(){
+    return this.firstName + " " + this.lastName + " | " + this.deptNumber + " | " + this.hoursWorked + " hrs";
+
+    }
 }
