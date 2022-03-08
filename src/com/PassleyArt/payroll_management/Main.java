@@ -6,8 +6,7 @@ package com.PassleyArt.payroll_management;
                           */
 
 
-import java.util.Arrays;
-import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -21,10 +20,17 @@ public class Main {
 
         };
 
-        List<StaffMember> staffMemberList = Arrays.asList(staffMembers);
-
         System.out.println("\n***StaffMembers Info***");
-        staffMemberList.forEach(System.out::println);
+        //staffMemberList.forEach(System.out::println);
+
+        for(StaffMember obj: staffMembers) {
+                    System.out.println(obj);
+                }
+
+
+
+
+
     }
 }
 
