@@ -1,8 +1,19 @@
 package com.PassleyArt.payroll_management;
 
+/* Group members: Nashorn Passley 1400162306
+                  Latona Levy 1917010761
+                  Ramon Francis 1400137487
+                          */
+
 public class SalesRep extends StaffMember{
 
     private double allowance;
+
+    @Override
+    double calculateSalary() {
+        double Salary = ((hoursWorked * 1500) + allowance);
+        return Salary;
+    }
 
     public SalesRep(){
 
@@ -28,6 +39,7 @@ public class SalesRep extends StaffMember{
                 "Last Name: " + lastName + "\n" +
                 "Dept #: " + deptNumber + "\n" +
                 "Hours Worked: " + hoursWorked + "\n" +
-                "Allowance: " + allowance + "\n");
+                "Allowance: " + allowance + "\n" +
+                "Salary: " + calculateSalary() + "\n");
     }
 }
